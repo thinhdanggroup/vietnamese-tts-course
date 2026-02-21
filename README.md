@@ -37,16 +37,16 @@ Each chapter has:
 
 ```mermaid
 flowchart LR
-    CH01["📻 01\nAudio Fundamentals"]
-    CH02["📝 02\nText Processing"]
-    CH03["🏛️ 03\nTTS Architectures"]
-    CH04["🎛️ 04\nNeural Codecs"]
-    CH05["🤖 05\nLLM-Based TTS"]
-    CH06["🎙️ 06\nVoice Cloning"]
-    CH07["🔧 07\nLoRA Theory"]
-    CH08["📂 08\nData Preparation"]
-    CH09["📈 09\nTraining & Eval"]
-    CH10["🚀 10\nDeployment"]
+    CH01["📻 01 Audio Fundamentals"]
+    CH02["📝 02 Text Processing"]
+    CH03["🏛️ 03 TTS Architectures"]
+    CH04["🎛️ 04 Neural Codecs"]
+    CH05["🤖 05 LLM-Based TTS"]
+    CH06["🎙️ 06 Voice Cloning"]
+    CH07["🔧 07 LoRA Theory"]
+    CH08["📂 08 Data Preparation"]
+    CH09["📈 09 Training & Eval"]
+    CH10["🚀 10 Deployment"]
 
     CH01 --> CH02
     CH02 --> CH03
