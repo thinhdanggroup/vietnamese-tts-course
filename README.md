@@ -101,26 +101,29 @@ Replace `chapter-01` with the chapter you want (e.g. `chapter-03`, `chapter-07`)
 **Before running any cells**, paste and run this setup cell at the top of the notebook:
 
 ```python
-# ── Colab Setup ──────────────────────────────────────────────
+# ── Colab Setup (chapters 01–04) ─────────────────────────────
 import os
 
-# Clone VieNeu-TTS (provides example audio at examples/audio_ref/)
-if not os.path.exists('/content/VieNeu-TTS'):
-    !git clone https://github.com/pnnbao97/VieNeu-TTS.git /content/VieNeu-TTS
-
-# Clone this course into the learning/ subfolder
-if not os.path.exists('/content/VieNeu-TTS/learning'):
-    !git clone https://github.com/thinhdanggroup/vietnamese-tts-course.git /content/VieNeu-TTS/learning
+# Clone this course repo (includes example audio in examples/audio_ref/)
+if not os.path.exists('/content/vietnamese-tts-course'):
+    !git clone https://github.com/thinhdanggroup/vietnamese-tts-course.git /content/vietnamese-tts-course
 
 # Install notebook dependencies
 !pip install -q librosa soundfile matplotlib
 
-# Change to chapters/ so relative paths (../examples/...) resolve correctly
-os.chdir('/content/VieNeu-TTS/learning/chapters')
+# Change to chapters/ so the path resolver finds examples/audio_ref/
+os.chdir('/content/vietnamese-tts-course/chapters')
 print("Setup complete. Current dir:", os.getcwd())
 ```
 
-> **Why clone VieNeu-TTS?** The notebooks load audio from `../examples/audio_ref/example.wav`, which lives inside the VieNeu-TTS repository. The setup above recreates the same directory structure that the local setup uses.
+For **chapters 05–10** (which run the VieNeu-TTS model), also clone the model repo:
+
+```python
+# ── Additional setup for chapters 05–10 ──────────────────────
+if not os.path.exists('/content/VieNeu-TTS'):
+    !git clone https://github.com/pnnbao97/VieNeu-TTS.git /content/VieNeu-TTS
+    !cd /content/VieNeu-TTS && pip install -q -e .
+```
 
 **Runtime recommendation:**
 - Chapters 01–04 (signal processing, architectures, codecs): CPU is fine
