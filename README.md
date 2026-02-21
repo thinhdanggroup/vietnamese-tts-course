@@ -88,6 +88,46 @@ Or read the theory files directly — each `.md` is self-contained.
 
 ---
 
+## Running on Google Colab
+
+You can open any chapter notebook directly in Colab:
+
+```
+https://colab.research.google.com/github/thinhdanggroup/vietnamese-tts-course/blob/main/chapters/chapter-01.ipynb
+```
+
+Replace `chapter-01` with the chapter you want (e.g. `chapter-03`, `chapter-07`).
+
+**Before running any cells**, paste and run this setup cell at the top of the notebook:
+
+```python
+# ── Colab Setup ──────────────────────────────────────────────
+import os
+
+# Clone VieNeu-TTS (provides example audio at examples/audio_ref/)
+if not os.path.exists('/content/VieNeu-TTS'):
+    !git clone https://github.com/pnnbao97/VieNeu-TTS.git /content/VieNeu-TTS
+
+# Clone this course into the learning/ subfolder
+if not os.path.exists('/content/VieNeu-TTS/learning'):
+    !git clone https://github.com/thinhdanggroup/vietnamese-tts-course.git /content/VieNeu-TTS/learning
+
+# Install notebook dependencies
+!pip install -q librosa soundfile matplotlib
+
+# Change to chapters/ so relative paths (../examples/...) resolve correctly
+os.chdir('/content/VieNeu-TTS/learning/chapters')
+print("Setup complete. Current dir:", os.getcwd())
+```
+
+> **Why clone VieNeu-TTS?** The notebooks load audio from `../examples/audio_ref/example.wav`, which lives inside the VieNeu-TTS repository. The setup above recreates the same directory structure that the local setup uses.
+
+**Runtime recommendation:**
+- Chapters 01–04 (signal processing, architectures, codecs): CPU is fine
+- Chapters 05–10 (model inference, fine-tuning, deployment): use a **GPU runtime** (`Runtime → Change runtime type → T4 GPU`)
+
+---
+
 ## Vietnamese Focus
 
 - All audio examples use Vietnamese speech
