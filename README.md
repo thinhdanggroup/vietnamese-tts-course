@@ -98,32 +98,7 @@ https://colab.research.google.com/github/thinhdanggroup/vietnamese-tts-course/bl
 
 Replace `chapter-01` with the chapter you want (e.g. `chapter-03`, `chapter-07`).
 
-**Before running any cells**, paste and run this setup cell at the top of the notebook:
-
-```python
-# ── Colab Setup (chapters 01–04) ─────────────────────────────
-import os
-
-# Clone this course repo (includes example audio in examples/audio_ref/)
-if not os.path.exists('/content/vietnamese-tts-course'):
-    !git clone https://github.com/thinhdanggroup/vietnamese-tts-course.git /content/vietnamese-tts-course
-
-# Install notebook dependencies
-!pip install -q librosa soundfile matplotlib
-
-# Change to chapters/ so the path resolver finds examples/audio_ref/
-os.chdir('/content/vietnamese-tts-course/chapters')
-print("Setup complete. Current dir:", os.getcwd())
-```
-
-For **chapters 05–10** (which run the VieNeu-TTS model), also clone the model repo:
-
-```python
-# ── Additional setup for chapters 05–10 ──────────────────────
-if not os.path.exists('/content/VieNeu-TTS'):
-    !git clone https://github.com/pnnbao97/VieNeu-TTS.git /content/VieNeu-TTS
-    !cd /content/VieNeu-TTS && pip install -q -e .
-```
+Each notebook has a built-in **Colab auto-setup cell** as its second cell. Just open the notebook and **run that cell first** — it automatically clones both repos, installs dependencies, and sets the working directory.
 
 **Runtime recommendation:**
 - Chapters 01–04 (signal processing, architectures, codecs): CPU is fine
