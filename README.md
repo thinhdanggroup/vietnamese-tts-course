@@ -35,18 +35,28 @@ Each chapter has:
 
 ## Learning Path
 
-```
-[01 Audio] → [02 Text] → [03 Architectures] → [04 Codecs]
-                                                     ↓
-                                             [05 LLM-TTS]
-                                             ↙           ↘
-                                   [06 Cloning]    [07 LoRA Theory]
-                                                         ↓
-                                                  [08 Data Prep]
-                                                         ↓
-                                             [09 Training & Eval]
-                                                         ↓
-                                                  [10 Deployment]
+```mermaid
+flowchart LR
+    CH01["📻 01\nAudio Fundamentals"]
+    CH02["📝 02\nText Processing"]
+    CH03["🏛️ 03\nTTS Architectures"]
+    CH04["🎛️ 04\nNeural Codecs"]
+    CH05["🤖 05\nLLM-Based TTS"]
+    CH06["🎙️ 06\nVoice Cloning"]
+    CH07["🔧 07\nLoRA Theory"]
+    CH08["📂 08\nData Preparation"]
+    CH09["📈 09\nTraining & Eval"]
+    CH10["🚀 10\nDeployment"]
+
+    CH01 --> CH02
+    CH02 --> CH03
+    CH03 --> CH04
+    CH04 --> CH05
+    CH05 --> CH06
+    CH05 --> CH07
+    CH07 --> CH08
+    CH08 --> CH09
+    CH09 --> CH10
 ```
 
 ---
