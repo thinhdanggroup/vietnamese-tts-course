@@ -213,11 +213,11 @@ Vietnamese has 6 tones (thanh điệu), each with a distinctive pitch contour th
 | Tone | Vietnamese Name | Diacritic | F0 Contour | Phonation |
 |------|----------------|-----------|------------|-----------|
 | Ngang | Level/Flat | (none) | High, flat | Modal |
-| Huyền | Falling | ` | Mid-low, falling | Breathy |
-| Sắc | Rising | ´ | High, rising | Modal |
-| Hỏi | Dipping | ̉ | Mid, dipping then rising | Modal |
-| Ngã | Creaky Rising | ˜ | High rising, creaky | Creaky |
-| Nặng | Low Falling | . | Low, short, falling | Constricted |
+| Huyền | Falling | `` ` `` (grave) | Mid-low, falling | Breathy |
+| Sắc | Rising | ´ (acute) | High, rising | Modal |
+| Hỏi | Dipping | ̉ (hook above, e.g. ả) | Mid, dipping then rising | Modal |
+| Ngã | Creaky Rising | ˜ (tilde) | High rising, creaky | Creaky |
+| Nặng | Low Falling | . (dot below) | Low, short, falling | Constricted |
 
 In the raw waveform:
 - **Ngang**: Uniformly spaced cycles of similar amplitude throughout the vowel
