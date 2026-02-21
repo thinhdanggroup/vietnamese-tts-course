@@ -16,16 +16,16 @@ ML practitioners who know the basics (training loops, loss functions, backpropag
 
 | Chapter | Title | Key Concepts |
 |---------|-------|-------------|
-| [01](chapter-01.md) | Audio Fundamentals | Waveform, STFT, Mel spectrogram, MFCC, Nyquist theorem |
-| [02](chapter-02.md) | Text Processing & Phonemization | Unicode normalization, Vietnamese tones, G2P, espeak-ng, tokenization |
-| [03](chapter-03.md) | TTS Architecture Evolution | Concatenative → HMM → Tacotron 2 → FastSpeech 2 → VITS → LLM-TTS |
-| [04](chapter-04.md) | Neural Audio Codecs | Vector quantization, RVQ, NeuCodec, DistillNeuCodec, token rate |
-| [05](chapter-05.md) | LLM-Based TTS (VieNeu-TTS) | Prompt format, causal LM, RoPE, KV-cache, temperature sampling |
-| [06](chapter-06.md) | Zero-Shot Voice Cloning | In-context cloning, speaker similarity, code-switching |
-| [07](chapter-07.md) | LoRA Fine-tuning Theory | Low-rank adaptation, rank selection, memory savings, training dynamics |
-| [08](chapter-08.md) | Data Preparation & Quality | SNR, tone distribution, filter pipeline, audio encoding |
-| [09](chapter-09.md) | Training, Monitoring & Evaluation | Loss curves, CER, UTMOS, MOS test design, checkpoint selection |
-| [10](chapter-10.md) | Deployment & Optimization | GGUF quantization, streaming, voices.json, RTF benchmark |
+| [01](chapters/chapter-01.md) | Audio Fundamentals | Waveform, STFT, Mel spectrogram, MFCC, Nyquist theorem |
+| [02](chapters/chapter-02.md) | Text Processing & Phonemization | Unicode normalization, Vietnamese tones, G2P, espeak-ng, tokenization |
+| [03](chapters/chapter-03.md) | TTS Architecture Evolution | Concatenative → HMM → Tacotron 2 → FastSpeech 2 → VITS → LLM-TTS |
+| [04](chapters/chapter-04.md) | Neural Audio Codecs | Vector quantization, RVQ, NeuCodec, DistillNeuCodec, token rate |
+| [05](chapters/chapter-05.md) | LLM-Based TTS (VieNeu-TTS) | Prompt format, causal LM, RoPE, KV-cache, temperature sampling |
+| [06](chapters/chapter-06.md) | Zero-Shot Voice Cloning | In-context cloning, speaker similarity, code-switching |
+| [07](chapters/chapter-07.md) | LoRA Fine-tuning Theory | Low-rank adaptation, rank selection, memory savings, training dynamics |
+| [08](chapters/chapter-08.md) | Data Preparation & Quality | SNR, tone distribution, filter pipeline, audio encoding |
+| [09](chapters/chapter-09.md) | Training, Monitoring & Evaluation | Loss curves, CER, UTMOS, MOS test design, checkpoint selection |
+| [10](chapters/chapter-10.md) | Deployment & Optimization | GGUF quantization, streaming, voices.json, RTF benchmark |
 
 Each chapter has:
 - A **theory file** (`.md`) — deep explanation with full math derivations
@@ -81,7 +81,7 @@ uv sync
 git clone https://github.com/thinhdanggroup/vietnamese-tts-course.git learning
 
 # Launch notebooks
-uv run jupyter lab learning/
+uv run jupyter lab learning/chapters/
 ```
 
 Or read the theory files directly — each `.md` is self-contained.
